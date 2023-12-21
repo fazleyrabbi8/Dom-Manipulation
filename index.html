@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <main>
+
+        <h1 onclick="console.log('today is a special') "> Today is a special event </h1>
+
+
+        <P id="Randomtext"> Random text for event </P>
+
+        <button id="update1"> Update Paragraph</button>
+
+        <h3 id="Random"> Random dummmy text</h3>
+
+        <input id="input-field" type="text">
+        <button id="updatebtn">
+            Update
+        </button>
+    </main>
+</body>
+
+<script src="Js/dom.js"></script>
+
+<script>
+   document.getElementById("updatebtn").addEventListener('click' , function(){
+ 
+    const inputtext = document.getElementById('input-field') ;
+
+    const text = inputtext.value ;
+    const p = document.getElementById('Random') ;
+    p.innerText = text ;
+    
+   })
+
+</script>
+
+</html>
