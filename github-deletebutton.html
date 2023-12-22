@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <h1 id="Random-Text">
+
+        Random Text
+    </h1>
+
+
+    <input type="text" placeholder="Please Enter Delete" name="Text" id="textfield">
+
+    <input id="DeleteBtn" type="button" value="Delete" disabled>
+</body>
+
+
+<script>
+
+    document.getElementById('textfield').addEventListener('keyup', function () {
+
+        const text = document.getElementById('textfield').value;
+        const DeleteBtn = document.getElementById('DeleteBtn');
+
+
+        if (text === 'Delete') {
+
+            DeleteBtn.removeAttribute('disabled');
+        }
+        else{
+            DeleteBtn.setAttribute('disabled' , true) ;
+        }
+
+
+    });
+    document.getElementById('DeleteBtn').addEventListener('click', function () {
+        const text = document.getElementById('Random-Text');
+        text.style.display = 'none';
+
+
+    })
+</script>
+
+</html>
